@@ -7,7 +7,7 @@ require_once __DIR__ . '/class-abstract-settings.php';
 class Settings extends Abstract_Settings {
 
   public function __construct($plugin) {
-    add_action('do_meta_boxes', [$this, 'do_meta_boxes']);
+    add_action('in_admin_header', [$this, 'do_meta_boxes']);    
   }
 
   public function do_meta_boxes() {
